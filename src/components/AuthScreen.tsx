@@ -2,11 +2,6 @@ import { useState } from "react";
 import { ScanLine, Mail, Lock, Loader2, AlertCircle } from "lucide-react";
 import { useAuth } from "../lib/useAuth";
 
-// Zastave su definisane ovde i one su deo tvog koda, ne mogu nestati
-const FlagSR = () => <svg viewBox="0 0 3 2" className="w-10 h-7 rounded border border-slate-200"><rect fill="#C6363C" width="3" height="1"/><rect fill="#0C4076" y="1" width="3" height="1"/><rect fill="#EEE" y="0.66" width="3" height="0.66"/></svg>;
-const FlagHR = () => <svg viewBox="0 0 3 2" className="w-10 h-7 rounded border border-slate-200"><rect fill="#FF0000" width="3" height="0.66"/><rect fill="#FFFFFF" y="0.66" width="3" height="0.66"/><rect fill="#0038A8" y="1.33" width="3" height="0.66"/></svg>;
-const FlagBA = () => <svg viewBox="0 0 3 2" className="w-10 h-7 rounded border border-slate-200"><rect fill="#002395" width="3" height="2"/><polygon points="0.4,0 2.6,0 0.4,2" fill="#FCDD09"/></svg>;
-
 export function AuthScreen() {
   const { signIn, signUp } = useAuth();
   const [mode, setMode] = useState<"signin" | "signup">("signin");
@@ -34,7 +29,7 @@ export function AuthScreen() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 flex flex-col items-center justify-center px-6 py-12">
       <div className="w-full max-w-sm">
         
-        {/* Logo i tvoj tekst */}
+        {/* Logo sekcija */}
         <div className="flex flex-col items-center mb-10">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30 mb-4">
             <ScanLine className="w-8 h-8 text-white" strokeWidth={2.2} />
@@ -107,13 +102,6 @@ export function AuthScreen() {
               {mode === "signin" ? "Prijavi se" : "Kreiraj nalog"}
             </button>
           </form>
-        </div>
-
-        {/* Zastave */}
-        <div className="flex justify-center gap-6 mt-8">
-          <FlagSR />
-          <FlagHR />
-          <FlagBA />
         </div>
       </div>
     </div>
