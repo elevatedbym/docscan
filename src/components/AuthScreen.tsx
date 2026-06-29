@@ -14,7 +14,6 @@ export function AuthScreen() {
     e.preventDefault();
     setError(null);
     setLoading(true);
-
     const { error } = mode === "signin" ? await signIn(email, password) : await signUp(email, password);
     if (error) setError(error.message);
     setLoading(false);
@@ -45,9 +44,12 @@ export function AuthScreen() {
           </form>
         </div>
 
-       {/* Zastave država */}
         <div className="flex justify-center gap-8 mt-8">
           <button onClick={() => changeLanguage('sr')} className="text-4xl hover:scale-110 transition-transform">🇷🇸</button>
           <button onClick={() => changeLanguage('hr')} className="text-4xl hover:scale-110 transition-transform">🇭🇷</button>
           <button onClick={() => changeLanguage('bs')} className="text-4xl hover:scale-110 transition-transform">🇧🇦</button>
-        </div> 
+        </div>
+      </div>
+    </div>
+  );
+}
