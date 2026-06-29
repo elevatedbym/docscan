@@ -34,7 +34,7 @@ export function AuthScreen() {
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30 mb-4">
             <ScanLine className="w-8 h-8 text-white" strokeWidth={2.2} />
           </div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">DocSkan</h1>
+          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">DocScan</h1>
           <p className="text-sm text-slate-500 mt-1.5 font-medium">Tvoj prevodilac u džepu</p>
         </div>
 
