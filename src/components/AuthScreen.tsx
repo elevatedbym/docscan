@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ScanLine, Mail, Lock, Loader2, AlertCircle } from "lucide-react";
 import { useAuth } from "../lib/useAuth";
 
-export function AuthScreen() {
+export function AuthScreen({setLanguage}) {
   const { signIn, signUp } = useAuth();
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
