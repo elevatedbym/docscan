@@ -28,16 +28,16 @@ export function AuthScreen() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 flex flex-col items-center justify-center px-6 py-12">
       <div className="w-full max-w-sm">
-        {/* Logo */}
+        {/* Logo sekcija sa tvojim tekstom */}
         <div className="flex flex-col items-center mb-10">
           <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30 mb-4">
             <ScanLine className="w-8 h-8 text-white" strokeWidth={2.2} />
           </div>
           <h1 className="text-2xl font-bold text-slate-900 tracking-tight">DocSkan</h1>
-          
+          <p className="text-sm text-slate-500 mt-1.5 font-medium">Tvoj prevodilac u džepu</p>
         </div>
 
-        {/* Form card */}
+        {/* Forma */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
           <div className="flex gap-1 mb-6 bg-slate-100 rounded-lg p-1">
             <button
@@ -70,7 +70,7 @@ export function AuthScreen() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   placeholder="Email"
-                  className="w-full pl-10 pr-3 py-2.5 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full pl-10 pr-3 py-2.5 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
@@ -84,7 +84,7 @@ export function AuthScreen() {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   placeholder="Lozinka"
-                  className="w-full pl-10 pr-3 py-2.5 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full pl-10 pr-3 py-2.5 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
