@@ -103,6 +103,13 @@ export function AuthScreen() {
             </button>
           </form>
         </div>
+
+        {/* Zastave preko linka - provereno rade */}
+        <div className="flex justify-center gap-6 mt-8">
+          <img src="https://flagcdn.com/w40/rs.png" alt="Srbija" className="w-10 h-7 object-cover rounded shadow-sm" />
+          <img src="https://flagcdn.com/w40/hr.png" alt="Hrvatska" className="w-10 h-7 object-cover rounded shadow-sm" />
+          <img src="https://flagcdn.com/w40/ba.png" alt="BiH" className="w-10 h-7 object-cover rounded shadow-sm" />
+        </div>
       </div>
     </div>
   );
