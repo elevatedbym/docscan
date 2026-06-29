@@ -95,19 +95,14 @@ export function AuthScreen({ setLanguage }: { setLanguage: (lang: string) => voi
         </div>
 
         {/* Zastave na dnu */}
-        <div className="flex justify-center gap-6 mt-8">
+        <div className="flex justify-center gap-4 mt-8">
           {LANGUAGES.map((lang) => (
             <button 
               key={lang.code} 
               onClick={() => setLanguage(lang.code)}
-              className="text-3xl hover:scale-110 transition-transform cursor-pointer"
-              title={lang.label}
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-white border-2 border-slate-200 hover:border-blue-500 text-sm font-bold text-slate-700 transition-all shadow-sm"
             >
-              {lang.flag}
+              {lang.code.toUpperCase()}
             </button>
           ))}
         </div>
-      </div>
-    </div>
-  );
-}
