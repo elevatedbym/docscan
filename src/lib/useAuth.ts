@@ -8,15 +8,20 @@ export function useAuth() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Initial session fetch
     supabase.auth.getSession().then(({ data }) => {
       setSession(data.session);
       setUser(data.session?.user ?? null);
       setLoading(false);
     });
 
+    // onAuthStateChange runs synchronously — wrap async work to avoid deadlock
     const { data: listener } = supabase.auth.onAuthStateChange((_event, sess) => {
-      setSession(sess);
-      setUser(sess?.user ?? null);
+      (async () => {
+        setSession(sess);
+        setUser(sess?.user ?? null);
+        setLoading(false);
+      })();
     });
 
     return () => listener.subscription.unsubscribe();
