@@ -45,7 +45,7 @@ export function AuthScreen() {
           </div>
           <h1 className="text-2xl font-bold text-slate-900 tracking-tight">DocSkan</h1>
           <p className="text-sm text-slate-500 mt-1.5 text-center">
-            Skeniraj dokumente, prevedi i dobij sažetak
+            Tvoj prevodilac u dzepu
           </p>
         </div>
 
@@ -121,10 +121,24 @@ export function AuthScreen() {
           </form>
         </div>
 
-        <p className="text-center text-xs text-slate-400 mt-6">
-          3 besplatna skeniranja · Prevod na srpski, hrvatski ili bosanski
-        </p>
+ </button>
+        </form>
+      </div>
+
+      {/* Ovde ubacujemo zastave */}
+      <div className="flex justify-center gap-4 mt-6">
+        {LANGUAGES.map((lang) => (
+          <button 
+            key={lang.code} 
+            onClick={() => setLanguage(lang.code)}
+            className="text-2xl hover:opacity-70 transition-opacity"
+            title={lang.label}
+          >
+            {lang.flag}
+          </button>
+        ))}
       </div>
     </div>
-  );
-}
+  </div>
+);
+}       
