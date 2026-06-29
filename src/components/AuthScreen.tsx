@@ -1,6 +1,19 @@
 import { useState } from "react";
-import { ScanLine } from "lucide-react";
+import { ScanLine, Mail, Lock, Loader2, AlertCircle } from "lucide-react";
 import { useAuth } from "../lib/useAuth";
+
+// Zastave kao jednostavne, jasne ikone
+function FlagSerbia() {
+  return <svg viewBox="0 0 3 2" className="w-10 h-7 rounded shadow-sm"><rect fill="#C6363C" width="3" height="1"/><rect fill="#0C4076" y="1" width="3" height="1"/><rect fill="#EEE" y="0.66" width="3" height="0.66"/></svg>;
+}
+
+function FlagCroatia() {
+  return <svg viewBox="0 0 3 2" className="w-10 h-7 rounded shadow-sm"><rect fill="#FF0000" width="3" height="0.66"/><rect fill="#FFFFFF" y="0.66" width="3" height="0.66"/><rect fill="#0038A8" y="1.33" width="3" height="0.66"/></svg>;
+}
+
+function FlagBosnia() {
+  return <svg viewBox="0 0 3 2" className="w-10 h-7 rounded shadow-sm"><rect fill="#002395" width="3" height="2"/><polygon points="0.4,0 2.6,0 0.4,2" fill="#FCDD09"/></svg>;
+}
 
 export function AuthScreen() {
   const { signIn, signUp } = useAuth();
@@ -39,11 +52,11 @@ export function AuthScreen() {
           </form>
         </div>
 
-        {/* Zastave - ispravni kodovi */}
-        <div className="flex justify-center gap-8 mt-8">
-          <span className="text-4xl">🇷🇸</span>
-          <span className="text-4xl">🇭🇷</span>
-          <span className="text-4xl">🇧🇦</span>
+        {/* Samo zastave, bez teksta, bez klikanja */}
+        <div className="flex justify-center gap-6 mt-8">
+          <FlagSerbia />
+          <FlagCroatia />
+          <FlagBosnia />
         </div>
       </div>
     </div>
