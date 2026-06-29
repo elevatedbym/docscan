@@ -52,13 +52,11 @@ export function AuthScreen() {
           </form>
         </div>
 
-        {/* Samo zastave, bez teksta, bez klikanja */}
+       {/* Zastave kao slike - najsigurniji prikaz */}
         <div className="flex justify-center gap-6 mt-8">
-          <FlagSerbia />
-          <FlagCroatia />
-          <FlagBosnia />
-        </div>
-      </div>
-    </div>
+          <img src="https://flagcdn.com/w40/rs.png" alt="Srbija" className="w-10 h-7 object-cover rounded shadow-sm" />
+          <img src="https://flagcdn.com/w40/hr.png" alt="Hrvatska" className="w-10 h-7 object-cover rounded shadow-sm" />
+          <img src="https://flagcdn.com/w40/ba.png" alt="Bosna i Hercegovina" className="w-10 h-7 object-cover rounded shadow-sm" />
+        </div> 
   );
 }
