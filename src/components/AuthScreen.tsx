@@ -34,6 +34,7 @@ export function AuthScreen() {
             <ScanLine className="w-8 h-8 text-white" strokeWidth={2.2} />
           </div>
           <h1 className="text-2xl font-bold text-slate-900 tracking-tight">DocSkan</h1>
+          
         </div>
 
         {/* Form card */}
