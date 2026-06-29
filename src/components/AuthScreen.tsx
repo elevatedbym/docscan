@@ -45,18 +45,9 @@ export function AuthScreen() {
           </form>
         </div>
 
-        <div className="flex justify-center gap-4 mt-8">
-          {["sr", "hr", "bs"].map((lang) => (
-            <button 
-              key={lang} 
-              onClick={() => changeLanguage(lang)}
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-white border border-slate-300 font-bold hover:border-blue-500 transition-all"
-            >
-              {lang.toUpperCase()}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+       {/* Zastave država */}
+        <div className="flex justify-center gap-8 mt-8">
+          <button onClick={() => changeLanguage('sr')} className="text-4xl hover:scale-110 transition-transform">🇷🇸</button>
+          <button onClick={() => changeLanguage('hr')} className="text-4xl hover:scale-110 transition-transform">🇭🇷</button>
+          <button onClick={() => changeLanguage('bs')} className="text-4xl hover:scale-110 transition-transform">🇧🇦</button>
+        </div> 
