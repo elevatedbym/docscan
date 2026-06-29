@@ -8,7 +8,7 @@ const LANGUAGES = [
   { code: "bs", label: "Bosanski", flag: "🇧🇦" },
 ];
 
-export function AuthScreen({ setLanguage }: { setLanguage: (lang: string) => void }) {
+export function AuthScreen(: { setLanguage: (lang: string) => void }) {
   const { signIn, signUp } = useAuth();
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
